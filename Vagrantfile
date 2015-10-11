@@ -4,12 +4,9 @@
 
 Vagrant.configure("2") do |config|
     config.vm.box = "ubuntu/trusty64"
-    config.ssh.forward_agent = true
     # Create a private network, which allows host-only access to the machine using a specific IP.
     config.vm.network "private_network", ip: "192.168.30.20"
     config.vm.network :forwarded_port, guest: 80, host: 8080
-    config.vm.network :forwarded_port, guest: 8000, host: 8000
-    config.vm.network :forwarded_port, guest: 3000, host: 3000
     config.vm.boot_timeout = 300
     config.vm.synced_folder "html/", "/usr/share/nginx/html", type: "nfs"
     # Shell provisioning
