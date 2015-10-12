@@ -10,8 +10,17 @@ This project automates the setup of a LEMP development environment.
 
 * [Vagrant](http://vagrantup.com)
 
-ingresar en la carpeta donde se encuentra el archivo ejecutar el comando 
+## How to use
 
-"vagrant up"
+```
+git clone https://github.com/abr4xas/vagrant-Ngix-mysql5.5-phpmyadmin--f.git mozilla
+```
 
-archivos en /home/vagrant/code
+```
+cd mozilla
+```
+
+```
+vagrant up
+```
+
